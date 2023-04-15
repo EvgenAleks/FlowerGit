@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class Flowers {
 
-    public String name;
-    public String color;
     public String countryOfOrigin;
+    public static String name;
+    public static String color;
+
 
     Flowers(String flName, String flColor, String country) {
         name = flName;
@@ -21,8 +22,16 @@ public class Flowers {
 
         Flowers flower = new Flowers(scan.next(), scan.next(), scan.next());
 
+
         System.out.println("The " + flower.name + " is " + flower.color);
         System.out.println("The " + flower.color + " " + flower.name + " comes from " + flower.countryOfOrigin);
+
+        if (name.equals("tulip") || color.equals("white")) {
+            System.out.println("This is my fav flower");
+        } else {
+            System.out.println("The " + flower.name + " is " + flower.color);
+        }
+
     }
 
 }
